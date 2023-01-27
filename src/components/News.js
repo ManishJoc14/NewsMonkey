@@ -27,7 +27,7 @@ export default class News extends Component {
     document.title = `NewsMonkey-${this.capitaliseFirst(this.props.category)}`
   }
   async updateNews() {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&sortBy=publishedAt&category=${this.props.category}&apiKey=a6f71be84847495d8329488c0a3eff8f&page=${this.state.page}&pagesize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=in&sortBy=publishedAt&category=${this.props.category}&apiKey=a83ee6808bbd4d8cb60e9a5c745e54a4&page=${this.state.page}&pagesize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();

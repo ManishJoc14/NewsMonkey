@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import News from './components/News';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
@@ -13,10 +13,10 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <Router basename='/NewsMonkey'>
+        <Router>
           <Navbar />
           <Routes>
-            <Route exact path='/NewsMonkey' element={<News key="general" pageSize={this.pageSize} country='in' category='general' />}></Route>
+            <Route exact path='/' element={<News key="general" pageSize={this.pageSize} country='in' category='general' />}></Route>
             <Route exact path='/Business' element={<News key="business" pageSize={this.pageSize} country='in' category='business' />}></Route>
             <Route exact path='/Entertainment' element={<News key="entertainment" pageSize={this.pageSize} country='in' category='entertainment' />}></Route>
             <Route exact path='/General' element={<News key="general" pageSize={this.pageSize} country='in' category='general' />}></Route>
