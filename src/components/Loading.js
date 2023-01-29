@@ -19,7 +19,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default class Spinner extends Component {
                   <span className="placeholder col-6"></span>
                   <span className="placeholder col-8"></span>
                 </p>
-                <a href="#" tabindex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
+                <a href="#" tabIndex="-1" className="btn btn-secondary disabled placeholder col-6"></a>
               </div>
             </div>
           </div>

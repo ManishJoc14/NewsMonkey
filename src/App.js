@@ -2,18 +2,36 @@ import './App.css';
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import News from './components/News';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 export default class App extends Component {
   pageSize = 10;
+  constructor(){
+    super();
+    this.state={
+        category:'general'
+    }
+  }
+  componentDidMount() {
+    const items = document.querySelectorAll('.listItems');
+    items.forEach(item => {
+       item.addEventListener('click',()=> {
+         console.log(`${item.children[0].children[1].innerText} clicked`);
+         this.setState({category:item.children[0].children[1].innerText})
+       });
+     });
+ }
   render() {
     return (
       <>
-        <Router>
+        <Navbar />
+        <News key={this.state.category}  pageSize={this.pageSize} country='in' category={this.state.category} />
+
+        {/* <Router>
           <Navbar />
           <Routes>
             <Route exact path='/' element={<News key="general" pageSize={this.pageSize} country='in' category='general' />}></Route>
@@ -25,7 +43,7 @@ export default class App extends Component {
             <Route exact path='/Sports' element={<News key="sports" pageSize={this.pageSize} country='in' category='sports' />}></Route>
             <Route exact path='/Technology' element={<News key="technology" pageSize={this.pageSize} country='in' category='technology' />}></Route>
           </Routes>
-        </Router>
+        </Router> */}
       </>
     )
   }

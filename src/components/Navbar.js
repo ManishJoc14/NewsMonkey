@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
+ componentDidMount() {
+     const items = document.querySelectorAll('.listItems');
+     items.forEach(item => {
+        item.addEventListener('click',()=> {
+          console.log(`${item.children[0].children[1].innerText} clicked`);
+          this.setState({category:item.children[0].children[1].innerText})
+        });
+      });
+  }
     render() {
         return (
             <>
                 <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/">
+                        <a className="navbar-brand" href="/">
                             NewsMonkey
-                        </Link>
+                        </a>
                         <button
                             className="navbar-toggler"
                             type="button"
@@ -24,63 +33,63 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/">
+                                    <a className="nav-link" aria-current="page" href="/">
                                         <strong>  Home </strong>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/">
+                                    <a className="nav-link" href="/">
                                         <strong>  About </strong>
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <button className="btn dropdown-toggle" style={{ border: "none" }} data-bs-toggle="dropdown" aria-expanded="false">
                                         <strong>  Categories </strong>
                                     </button>
                                     <ul className="dropdown-menu dropdown-menu-light">
-                                        <li><Link className="dropdown-item" to="/Business"><i className="fa-solid fa-briefcase"></i><span> Business</span></Link></li>
-                                        <li><Link className="dropdown-item" to="/Entertainment"><i className="fa-solid fa-film"></i><span> Entertainment</span></Link></li>
-                                        <li><Link className="dropdown-item" to="/General"><i className="fa-solid fa-users"></i> <span>General</span></Link></li>
-                                        <li><Link className="dropdown-item" to="/Health"><i className="fa-solid fa-kit-medical"></i> <span>Health</span></Link></li>
-                                        <li><Link className="dropdown-item" to="/Science"><i className="fa-solid fa-atom"></i> <span>Science</span></Link></li>
-                                        <li><Link className="dropdown-item" to="/Sports"><i className="fas fa-futbol"></i> <span>Sports</span></Link></li>
-                                        <li><Link className="dropdown-item" to="/Technology"><i className="fa-solid fa-globe"></i> <span>Technology</span></Link></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fa-solid fa-briefcase"></i><span className='items'> Business</span></a></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fa-solid fa-film"></i><span className='items'> Entertainment</span></a></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fa-solid fa-users"></i> <span className='items'>General</span></a></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fa-solid fa-kit-medical"></i> <span className='items'>Health</span></a></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fa-solid fa-atom"></i> <span className='items'>Science</span></a></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fas fa-futbol"></i> <span className='items'>Sports</span></a></li>
+                                        <li className='listItems'><a className="dropdown-item" style={{cursor:'pointer'}} ><i className="fa-solid fa-globe"></i> <span className='items'>Technology</span></a></li>
                                     </ul>
                                 </li>
-                                {/* <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                                {/* <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     Business
-                                </Link>
+                                </a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                            <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     Entertainment
-                                </Link>
+                                </a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                            <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     General
-                                </Link>
+                                </a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                            <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     Health
-                                </Link>
+                                </a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                            <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     Science
-                                </Link>
+                                </a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                            <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     Sports
-                                </Link>
+                                </a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/about">
+                            <li className="nav-item items"style={{cursor:'pointer'}}>
+                                <a className="nav-link">
                                     Technology
-                                </Link>
+                                </a>
                             </li> */}
                             </ul>
                             <form className="d-flex" role="search">
