@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Spinner extends Component {
-  render() {
+const Spinner=(props)=>{
     return (
       <div className='container'>
         <div className="row">
           <div className="col-md-4 col-sm-10 my-2">
             <div className="card"style={{
-          backgroundColor: this.props.color==='light'?'white':'black',
-          color:this.props.color==='light'?'black':'white'
+          backgroundColor: props.color==='light'?'white':'black',
+          color:props.color==='light'?'black':'white'
       }} aria-hidden="true">
               <div className="card-img-top placeholder-glow" style={{ height: '220px', backgroundColor: 'grey' }} />
               <div className="card-body">
@@ -28,8 +27,8 @@ export default class Spinner extends Component {
           </div>
           <div className="col-md-4 col-sm-10 my-2">
             <div className="card"style={{
-          backgroundColor: this.props.color==='light'?'white':'black',
-          color:this.props.color==='light'?'black':'white'
+          backgroundColor: props.color==='light'?'white':'black',
+          color:props.color==='light'?'black':'white'
       }} aria-hidden="true">
               <div className="card-img-top placeholder-glow" style={{ height: '220px', backgroundColor: 'grey' }} />
               <div className="card-body">
@@ -49,8 +48,8 @@ export default class Spinner extends Component {
           </div>
           <div className="col-md-4 col-sm-10 my-2">
             <div className="card"style={{
-          backgroundColor: this.props.color==='light'?'white':'black',
-          color:this.props.color==='light'?'black':'white'
+          backgroundColor: props.color==='light'?'white':'black',
+          color:props.color==='light'?'black':'white'
       }} aria-hidden="true">
               <div className="card-img-top placeholder-glow" style={{ height: '220px', backgroundColor: 'grey' }} />
               <div className="card-body">
@@ -70,8 +69,8 @@ export default class Spinner extends Component {
           </div>
           <div className="col-md-4 col-sm-10 my-2">
             <div className="card"style={{
-          backgroundColor: this.props.color==='light'?'white':'black',
-          color:this.props.color==='light'?'black':'white'
+          backgroundColor: props.color==='light'?'white':'black',
+          color:props.color==='light'?'black':'white'
       }} aria-hidden="true">
               <div className="card-img-top placeholder-glow" style={{ height: '220px', backgroundColor: 'grey' }} />
               <div className="card-body">
@@ -91,8 +90,8 @@ export default class Spinner extends Component {
           </div>
           <div className="col-md-4 col-sm-10 my-2">
             <div className="card"style={{
-          backgroundColor: this.props.color==='light'?'white':'black',
-          color:this.props.color==='light'?'black':'white'
+          backgroundColor: props.color==='light'?'white':'black',
+          color:props.color==='light'?'black':'white'
       }} aria-hidden="true">
               <div className="card-img-top placeholder-glow" style={{ height: '220px', backgroundColor: 'grey' }} />
               <div className="card-body">
@@ -112,8 +111,8 @@ export default class Spinner extends Component {
           </div>
           <div className="col-md-4 col-sm-10 my-2">
             <div className="card"style={{
-          backgroundColor: this.props.color==='light'?'white':'black',
-          color:this.props.color==='light'?'black':'white'
+          backgroundColor: props.color==='light'?'white':'black',
+          color:props.color==='light'?'black':'white'
       }} aria-hidden="true">
               <div className="card-img-top placeholder-glow" style={{ height: '220px', backgroundColor: 'grey' }} />
               <div className="card-body">
@@ -139,5 +138,5 @@ export default class Spinner extends Component {
         </div>
       </div>
     )
-  }
 }
+export default Spinner;

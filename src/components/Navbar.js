@@ -1,37 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
-export default class Navbar extends Component {
-    constructor(props){
-        super(props);
-            // this.state=({
-            //     navMode:'light',
-            //     textMode : 'black'
-            // })
-            } 
-
-        //changeMode = ()=>{
-        // this.setState({navMode: this.state.navMode=='light'?'dark':'light',textMode: this.state.textMode=='black'?'white':'black'})
-        // const root = document.getElementById('root');
-        // root.style.backgroundColor=this.state.navMode=='light'?'black':'white';
-
-        // const heading = document.getElementById('heading');
-        // heading.style.color=this.state.navMode=='light'?'white':'black';
-
-        // const cards = document.getElementsByClassName('card');
-        // const arrOfCards = Array.from(cards);
-        // arrOfCards.forEach((card)=>{
-        //     card.style.backgroundColor=this.state.navMode=='light'?'black':'white';
-        //     card.style.border=`2px solid ${this.state.navMode=='light'?'white':'black'}`;
-        //     card.style.color = this.state.navMode=='light'?'white':'black'
-        // }); 
-        // }
-
-
-    render() {
+const NavBar = (props)=> {
         return (
-            <>
-                <nav className={`navbar navbar-expand-lg navbar-${this.props.mode} bg-${this.props.mode}`}>
+            <div>
+                <nav className={`navbar fixed-top navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
                     <div className="container-fluid">
                         <Link className="navbar-brand"to="/NewsMonkey">
                             NewsMonkey
@@ -61,7 +34,7 @@ export default class Navbar extends Component {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <button className="btn" style={{ border: "none" }} data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span className={`text-${this.props.mode === 'light' ? 'dark' : 'light'}`}>  Categories <i class="fa-solid fa-caret-down"></i></span>
+                                        <span className={`text-${props.mode === 'light' ? 'dark' : 'light'}`}>  Categories <i className="fa-solid fa-caret-down"></i></span>
                                     </button>
                                     <ul className="dropdown-menu dropdown-menu-light">
                                         <li><Link className="dropdown-item" to='/Business' style={{ cursor: 'pointer' }} ><i className="fa-solid fa-briefcase"></i><span> Business</span></Link></li>
@@ -85,14 +58,15 @@ export default class Navbar extends Component {
                                     Search
                                 </button>
                             </form>
-                            <div className={`form-check form-switch d-flex my-3 text-${this.props.mode === 'light' ? 'dark' : 'light'}`} >
-                            <input className="form-check-input ms-lg-0 me-3 " onClick={this.props.toggleMode} style={{ height: '1.5em', width: '3em', cursor:'pointer' }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                            <label className="form-check-label " htmlFor="flexSwitchCheckDefault"style={{ cursor: 'pointer' }}>Enable {this.props.mode === 'light' ? 'dark' : 'light'} mode</label>
+                            <div className={`form-check form-switch d-flex my-3 text-${props.mode === 'light' ? 'dark' : 'light'}`} >
+                            <input className="form-check-input ms-lg-0 me-3 " onClick={props.toggle} style={{ height: '1.5em', width: '3em', cursor:'pointer' }} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                            <label className="form-check-label " htmlFor="flexSwitchCheckDefault"style={{ cursor: 'pointer' }}>Enable {props.mode === 'light' ? 'dark' : 'light'} mode</label>
                         </div>
                         </div>
                     </div>
                 </nav>
-            </>
+            </div>
         )
-    }
 }
+
+export default NavBar;
